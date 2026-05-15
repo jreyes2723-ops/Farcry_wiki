@@ -1,0 +1,121 @@
+:root {
+    --primary-red: #ff3e3e;
+    --royal-blue: #3e8dff;
+    --bg-dark: #0a0a0c;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --gold: #ffd700;
+}
+
+body {
+    background: linear-gradient(135deg, #1a0000 0%, #00001a 100%);
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+/* Navegación */
+.navbar {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid var(--primary-red);
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.logo span { color: var(--primary-red); }
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.nav-links a:hover { color: var(--royal-blue); }
+
+/* Contenedores y Grillas */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.hero { text-align: center; padding: 3rem 0; }
+
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: 0.3s;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-red);
+    background: rgba(255, 62, 62, 0.1);
+}
+
+/* Fichas de Personaje y Facciones */
+.profile-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    background: rgba(0,0,0,0.4);
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.char-img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    border-bottom: 5px solid var(--royal-blue);
+}
+
+.faction-box {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.golden-path { border-left: 5px solid var(--gold); background: rgba(255, 215, 0, 0.05); }
+.royal-army { border-left: 5px solid var(--primary-red); background: rgba(255, 62, 62, 0.05); }
+
+.btn {
+    display: inline-block;
+    background: var(--primary-red);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
